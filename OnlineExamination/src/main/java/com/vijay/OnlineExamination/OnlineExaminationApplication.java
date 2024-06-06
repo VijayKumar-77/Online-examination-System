@@ -1,13 +1,12 @@
-package com.vijay.tmf.Online.Examination.System;
+package com.vijay.OnlineExamination;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OnlineExaminationSystemApplication {
+public class OnlineExaminationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OnlineExaminationSystemApplication.class, args);
+		SpringApplication.run(OnlineExaminationApplication.class, args);
 	}
-
 }

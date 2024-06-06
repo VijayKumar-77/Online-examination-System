@@ -1,10 +1,10 @@
-package com.vijay.tmf.Online.Examination.System;
+package com.vijay.OnlineExamination;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OnlineExaminationSystemApplicationTests {
+class OnlineExaminationApplicationTests {
 
 	@Test
 	void contextLoads() {
