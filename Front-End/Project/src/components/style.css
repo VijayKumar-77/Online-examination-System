@@ -1,0 +1,140 @@
+/* Login css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://examonline.in/wp-content/uploads/2021/11/blog1.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 90px; /* Adjust padding to make the form bigger */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-container form div {
+    margin-bottom: 20px; /* Adjust margin between form elements */
+    width: 100%;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px; /* Adjust padding for input fields */
+    font-size: 16px; /* Adjust font size for input fields */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: #007bff;
+}
+
+.login-container input:hover {
+    border-color: #007bff;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px; /* Adjust padding for button */
+    font-size: 16px; /* Adjust font size for button */
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+
+/* Register css */
+.register-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+}
+
+.register-container form div {
+    margin-bottom: 15px;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.register-container input:focus {
+    border-color: #007bff;
+}
+
+.register-container input:hover {
+    border-color: #007bff;
+}
+
+/* Adjust button size and position */
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 50px; /* Position the button 20px from the bottom */
+    right:50%; /* Center the button horizontally */
+    transform: translateX(-80%); /* Adjust for centering */
+}
+
+.register-container button:hover {
+    background: #0056b3;
+}
+.go-to-register {
+    margin-top: 20px; /* Add margin at the top for spacing */
+    text-decoration: none;
+    color: #007bff; /* Set color for the button text */
+    font-weight: bold;
+}
+.go-to-register:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
