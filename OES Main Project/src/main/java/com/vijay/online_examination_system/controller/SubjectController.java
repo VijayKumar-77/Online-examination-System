@@ -1,4 +1,4 @@
-package Controllers;
+package com.vijay.online_examination_system.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import Entity.Subject;
-import Repository.SubjectRepository;
+import com.vijay.online_examination_system.Repository.SubjectRepository;
+import com.vijay.online_examination_system.model.Subject;
 
 @RestController
 @CrossOrigin("*")

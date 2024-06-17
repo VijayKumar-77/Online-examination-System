@@ -1,9 +1,11 @@
-package Repository;
+package com.vijay.online_examination_system.Repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import Entity.Admin;
+import com.vijay.online_examination_system.model.Admin;
+
+
 
 @Repository
 public interface AdminRepository extends CrudRepository<Admin, Integer> {

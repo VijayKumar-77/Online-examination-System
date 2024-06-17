@@ -1,4 +1,4 @@
-package Entity;
+package com.vijay.online_examination_system.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
