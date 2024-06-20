@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vijay.online_examination_system.DTO.LoginDTO;
+import com.vijay.online_examination_system.DTO.UserLoginDTO;
 import com.vijay.online_examination_system.Repository.UserRepository;
 import com.vijay.online_examination_system.model.User;
-
 
 
 @RestController
@@ -26,6 +25,7 @@ public class UserController {
 	   private UserRepository userRepository;
 	   
 	     // get all user
+	   
 		   @GetMapping("/user")
 		   public List<User> getAllUser() {
 			   return (List<User>)this.userRepository.findAll();
@@ -33,6 +33,7 @@ public class UserController {
 	   
 	   
 	   // get user detail by its email
+		   
 	   @GetMapping("/user/{email}")
 	   public User getUserDetails(@PathVariable("email") String email) {
 		   return this.userRepository.findByEmail(email);
@@ -40,6 +41,7 @@ public class UserController {
 	   
 	   
 	   // to add a new user
+	   
 	   @PostMapping("/user/register")
 	    public ResponseEntity<String> registerUser(@RequestBody User user) {
 	        if (this.userRepository.findByEmail(user.getEmail()) != null) {
@@ -51,8 +53,9 @@ public class UserController {
 	   
 	   
 	   // user login
+	   
 	    @PostMapping("/user/login")
-	    public ResponseEntity<String> loginUser(@RequestBody LoginDTO loginDTO) {
+	    public ResponseEntity<String> loginUser(@RequestBody UserLoginDTO loginDTO) {
 	        User user = this.userRepository.findByEmail(loginDTO.getEmail());
 	        if (user != null && user.getPassword().equals(loginDTO.getPassword())) {
 	            return ResponseEntity.ok("Login successful");
@@ -62,20 +65,3 @@ public class UserController {
 	    }
 }
 
-//@RestController
-//@RequestMapping("/api/users")
-//public class UserController {
-//
-//    @Autowired
-//    private UserService userService;
-//
-//    @PostMapping("/register")
-//    public ResponseEntity<?> registerUser(@RequestBody User user) {
-//        try {
-//            User registeredUser = userService.registerUser(user);
-//            return ResponseEntity.ok(registeredUser);
-//        } catch (Exception e) {
-//            return ResponseEntity.badRequest().body(e.getMessage());
-//        }
-//    }
-//}

@@ -16,7 +16,6 @@ public class Question {
 	  
 	  @Column(name="question_name")
 	  private String qname;
-	  
 	  private String optionOne;
 	  private String optionTwo;
 	  private String optionThree;

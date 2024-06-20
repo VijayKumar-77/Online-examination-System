@@ -1,5 +1,8 @@
 package com.vijay.online_examination_system.model;
 
+import java.sql.Date;
+import java.util.Objects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +16,7 @@ public class Result {
  
 	   @Id
 	   @GeneratedValue(strategy = GenerationType.IDENTITY)
-	   private int id;
+	   private Long id;
 	   
 	   @Column(name="result_status")
 	   private String status;
@@ -22,7 +25,7 @@ public class Result {
 	   private String score;
 	   
 	   @Column(name="exam_date")
-	   private String edate;
+	   private Date examDate;
 	   
 	   @Column(name="total_marks")
 	   private String totalMarks;
@@ -31,22 +34,46 @@ public class Result {
 	   private String totalQuestion;
 	   
 	   @ManyToOne
-	   @JoinColumn(name= "exam_name")
+	   @JoinColumn(name= "subject_id")
 	   private Subject sname;
 	   
-	   @ManyToOne
-	   @JoinColumn(name= "user_email")
-	   private User email;
+	   @Column(name= "user_email")
+	   private String email;
 	   
 	   @ManyToOne
-	   @JoinColumn(name= "exam_id")
+	   @JoinColumn(name= "exam_id", referencedColumnName = "id")
 	   private Exam examId;
+	   public Result() {
+	       // Default constructor
+	   }
+
+	   // Constructor with all fields except id
+	   public Result(String status, String score, Date examDate, String totalMarks, String totalQuestion, Subject sname, String email, Exam examId) {
+	       this.status = status;
+	       this.score = score;
+	       this.examDate = examDate;
+	       this.totalMarks = totalMarks;
+	       this.totalQuestion = totalQuestion;
+	       this.sname = sname;
+	       this.email = email;
+	       this.examId = examId;
+	   }
+
 	   
-	   public int getId() {
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -66,12 +93,12 @@ public class Result {
 		this.score = score;
 	}
 
-	public String getEdate() {
-		return edate;
+	public Date getExamDate() {
+		return examDate;
 	}
 
-	public void setEdate(String edate) {
-		this.edate = edate;
+	public void setExamDate(Date examDate) {
+		this.examDate = examDate;
 	}
 
 	public String getTotalMarks() {
@@ -98,20 +125,38 @@ public class Result {
 		this.sname = sname;
 	}
 
-	public User getEmail() {
-		return email;
-	}
-
-	public void setEmail(User email) {
-		this.email = email;
-	}
-
 	public Exam getExamId() {
 		return examId;
 	}
 
 	public void setExamId(Exam examId) {
 		this.examId = examId;
-	}
+	}   
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Result result = (Result) o;
+    return Objects.equals(id, result.id);
+}
 
+@Override
+public int hashCode() {
+    return Objects.hash(id);
+}
+
+@Override
+public String toString() {
+    return "Result{" +
+            "id=" + id +
+            ", status='" + status + '\'' +
+            ", score='" + score + '\'' +
+            ", examDate=" + examDate +
+            ", totalMarks='" + totalMarks + '\'' +
+            ", totalQuestion='" + totalQuestion + '\'' +
+            ", sname=" + sname +
+            ", email='" + email + '\'' +
+            ", examId=" + examId +
+            '}';
+}
 }

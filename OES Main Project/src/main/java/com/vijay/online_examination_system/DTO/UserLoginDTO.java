@@ -1,8 +1,9 @@
 package com.vijay.online_examination_system.DTO;
 
-public class LoginDTO {
+public class UserLoginDTO {
     private String email;
     private String password;
+    
 	public String getEmail() {
 		return email;
 	}
