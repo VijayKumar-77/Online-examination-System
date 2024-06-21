@@ -1,0 +1,111 @@
+// user register
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "secret123"
+  }
+  
+  // user login
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "secret123"
+  }
+  
+  // Admin register
+  {
+    "name": "Admin Name",
+    "password": "admin123"
+  }
+  //  admin login
+  {
+    "name": "Admin Name",
+    "password": "admin123"
+  }
+  
+  // add subject
+  {
+    "name": "chemistry"
+  }
+  
+  // add exam
+  {
+    "name": {
+      "id": 1,
+      "name": "Mathematics"
+    },
+    "desc": "Mid-term Exam",
+    "date": "2024-07-15",
+    "marks": "100",
+    "totalQuestion": "50",
+    "passMarks": "50",
+    "level": "Intermediate"
+  }
+  
+  // add question
+  {
+    "name": {
+      "id": 4,
+      "name": "Mathematics",
+      "qname": "what is the cpital of india",
+      "optionOne": "delhi",
+      "optionTwo": "andhra",
+      "optionThree": "vizag",
+      "optionFour": "rajasthan",
+      "answer": null,
+      "sname": null,
+      "ename": null
+    },
+    "desc": "Mid-term Exam",
+    "date": "2024-07-15",
+    "marks": "100",
+    "totalQuestion": "50",
+    "passMarks": "50",
+    "level": "Intermediate"
+  }
+  
+  
+  //  edit quetsion editing id :4
+  {
+    "name": {
+      "id": 4,
+      "name": "Mathematics",
+      "qname": "what is the cpital of india",
+      "optionOne": "delhi",
+      "optionTwo": "andhra",
+      "optionThree": "vizag",
+      "optionFour": "rajasthan",
+      "answer": null,
+      "sname": null,
+      "ename": null
+    },
+    "desc": "Mid-term Exam",
+    "date": "2024-07-15",
+    "marks": "100",
+    "totalQuestion": "50",
+    "passMarks": "50",
+    "level": "Intermediate"
+  }
+  
+  // save result
+  {
+    "id": 12345,
+    "status": "Passed",
+    "score": "85%",
+    "examDate": "2024-06-20",
+    "totalMarks": "100",
+    "totalQuestion": "20",
+    "sname": {
+      "id": 1,
+      "subjectName": "Mathematics",
+      "subjectCode": "MATH101"
+    },
+    "email": "user@example.com",
+    "examId": {
+      "id": 12345,
+      "examName": "Final Exam",
+      "examDate": "2024-06-20"
+    }
+  }
+  
+  
