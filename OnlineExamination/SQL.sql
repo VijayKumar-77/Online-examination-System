@@ -1,2 +1,0 @@
-create database online_exam_system;
-use online_exam_system;
